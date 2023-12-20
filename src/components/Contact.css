@@ -1,0 +1,59 @@
+.contactList{
+    max-width: 70%;
+    margin:2rem auto;
+    height: 4.3rem;
+    margin-top: 2rem;
+    background-color: rgb(91, 101, 191);
+}
+.lists{
+    display: flex;
+    justify-content: space-evenly;
+    margin:.5px 0;
+    /* background-color: antiquewhite; */
+}
+.inputs-content{
+    border: 2px solid #716d6d;
+    background-color: bisque;
+    margin:5px 0;
+    width: 32%;
+    height: 1.3rem;
+    padding:1px 2px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.edit-btn{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 45%;
+    padding: .1rem .5rem;
+}
+.edit{
+    background-color: green;
+}
+.edit:hover{
+    background-color: rgb(9, 66, 9);
+}
+.delete{
+    background-color: brown;
+}
+.delete:hover{
+    background-color: red;
+}
+.update{
+    background-color: darkgreen;
+}
+.update:hover{
+    background-color: rgb(11, 81, 11);
+}
+.cancel{
+    background-color: rgb(43, 35, 35);
+}
+.cancel:hover{
+    background-color: black;
+}
