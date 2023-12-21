@@ -29,7 +29,7 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
 
     return (
         <div className="contactList">
-            {edit ? ContactList(
+            {edit ? (
                 <>
                     <form className="contact-detail" >
                         <div className="lists">
