@@ -30,7 +30,7 @@ const Contact_container = () => {
     }
     getData();
     return setNewContact([]);
-  },[1])
+  },[])
 
 
   const dataHandlerInput = (event) => {
