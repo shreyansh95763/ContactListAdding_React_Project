@@ -125,9 +125,12 @@ const Contact_container = () => {
         </div>
       )}
       <div className="contactList-containers">
-     { newContact?.map((value)=>(
-       <ContactList key ={value.id} data={value} updateContact={updateContacts} deleteContact={deleteContact}/>
-      ))}
+     { newContact?.map((value)=>{
+      if(value.name !== '' || value.number !== '' || value.email !== ''){
+        return <ContactList key ={value.id} data={value} updateContact={updateContacts} deleteContact={deleteContact}/>
+      }
+     } 
+      )}
     </div>
     </>
   );
