@@ -35,11 +35,12 @@ const Contact_container = () => {
     return setNewContact([]);
   },[])
 
-
+    // event handling of the inputs
   const dataHandlerInput = (event) => {
      setData((prev)=>({...prev,[event.target.name] : event.target.value}))
   };
 
+      // update of the contacts in newcontact useState
   const updateContacts = async(updatedData )=>{
       const res = await axios.put(`https://jsonplaceholder.typicode.com/users/1`);
       console.log(res);     
@@ -58,12 +59,14 @@ const Contact_container = () => {
       setNewContact(newArray);
   }
  
+    //  Delete the contatact of newContact with id 
   const deleteContact = async(event) =>{
     await axios.delete(`https://jsonplaceholder.typicode.com/users/${event.id}`);
     const newArrey = newContact.filter((item)=> item.id !== event.id);
     setNewContact(newArrey);
 
   }
+    //  Save the contact in newContact
   const saveContact =async (e) => {
     e.preventDefault();
     // props.passVal(data);
@@ -106,6 +109,7 @@ const Contact_container = () => {
         </div>
       </div>
 
+          {/* ///////if model is true then code run given */}
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
@@ -125,6 +129,8 @@ const Contact_container = () => {
           </div>
         </div>
       )}
+
+          {/* display the items of newcontact through map */}
       <div className="contactList-containers">
      { newContact?.map((value)=>{
       if(value.name !== '' || value.number !== '' || value.email !== ''){

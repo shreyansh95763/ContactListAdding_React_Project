@@ -9,9 +9,11 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
         email: data.email,
     })
 
+    // after edit button click take the input as event/; 
     const handleInputChange = (event) => {
         setInputs((prev) => ({ ...prev, [event.target.name]: event.target.value }))
     }
+    // cancel to the edited values
     const cancelEdit = () => {
         setInputs({
             name: data.name,
@@ -20,6 +22,7 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
         });
         setEdit(false);
     };
+    //update the data and update the value of newContact through thier id
     const updatedContact = async (event) => {
         event.preventDefault();
         console.log(data.name);
@@ -29,6 +32,7 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
 
     return (
         <div className="contactList">
+                    {/* if edit true then run code  */}
             {edit ? (
                 <>
                     <form className="contact-detail" >
@@ -43,13 +47,16 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
                         </div>
                     </form>
                 </>
-            ) :  (<div className="contact-detail lists">
+            ) : 
+                {/* then the value of updated is display  */}
+             (<div className="contact-detail lists">
                     <span className="inputs-content">{inputs.name}</span>
                     <span className="inputs-content">+91  {inputs.number}</span>
                     <span className="inputs-content">{inputs.email}</span>
                 </div>
                 )}
             
+                  {/* if edit false then not perform the update function */}
                 {(!edit && (
                     <>
                       {/* <div className="main-btn"></div> */}
