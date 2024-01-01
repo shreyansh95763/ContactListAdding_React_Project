@@ -5,6 +5,9 @@ import "./Input_contact.css";
 
 const Contact_container = () => {
   const [modal, setModal] = useState(false);
+  const toggleModal = () => {
+    setModal(!modal);
+  };
   const [data, setData] = useState({
     name:"",
     number:"",
@@ -21,9 +24,9 @@ const Contact_container = () => {
       response?.newContact?.forEach((element) => {
         const putElements = {
           id: element.id,
-          name:element.name,
+          name:element.name, 
           number:element.number,
-          email:element.email
+          email:element.email.com
         };
         setNewContact((preData)=> [ ...preData , putElements ]);
       });
@@ -82,9 +85,7 @@ const Contact_container = () => {
   };
 
   // console.log(newContact);
-  const toggleModal = () => {
-    setModal(!modal);
-  };
+  
 
   // if (modal) {
   //   document.body.classList.add('active-modal') 
