@@ -8,6 +8,7 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
         number: data.number,
         email: data.email,
     })
+    // console.log(data);
 
     // after edit button click take the input as event/; 
     const handleInputChange = (event) => {
@@ -47,9 +48,7 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
                         </div>
                     </form>
                 </>
-            ) : 
-                {/* then the value of updated is display  */}
-             (<div className="contact-detail lists">
+            ) : (<div className="contact-detail lists">
                     <span className="inputs-content">{inputs.name}</span>
                     <span className="inputs-content">+91  {inputs.number}</span>
                     <span className="inputs-content">{inputs.email}</span>
