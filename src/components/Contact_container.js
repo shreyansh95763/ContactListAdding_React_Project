@@ -10,7 +10,7 @@ const Contact_container = () => {
   };
   const [data, setData] = useState({
     name: "",
-    number: "",
+    phone: "",
     email: "",
   });
   const [newContact, setNewContact] = useState([]);
@@ -90,7 +90,7 @@ const Contact_container = () => {
       // Clear the form data and close the modal
       setData({
         name: "",
-        number: "",
+        phone: "",
         email: "",
       });
       toggleModal();
@@ -127,9 +127,8 @@ const Contact_container = () => {
                 />
                 <input
                   type="tel"
-                  name="number"
-                  value={data.number}
-                  pattern="[0-9]{10}"
+                  name="phone"
+                  value={data.phone}
                   placeholder="Number"
                   onChange={dataHandlerInput}
                   autoComplete="off"

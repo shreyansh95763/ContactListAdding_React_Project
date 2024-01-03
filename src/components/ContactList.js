@@ -5,7 +5,7 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
     const [edit, setEdit] = useState(false);
     const [inputs, setInputs] = useState({
         name: data.name,
-        number: data.number,
+        phone: data.phone,
         email: data.email,
     })
     // console.log(data);
@@ -18,7 +18,7 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
     const cancelEdit = () => {
         setInputs({
             name: data.name,
-            number: data.number,
+            phone: data.phone,
             email: data.email,
         });
         setEdit(false);
@@ -39,7 +39,7 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
                     <form className="contact-detail" >
                         <div className="lists">
                             <input className="inputs-content" type="text" name="name" value={inputs.name} onChange={handleInputChange} required autofocus />
-                            <input className="inputs-content" type="test" name="number" value={inputs.number} onChange={handleInputChange} required />
+                            <input className="inputs-content" type="test" name="phone" value={inputs.phone} onChange={handleInputChange} required />
                             <input className="inputs-content" type="email" name="email" value={inputs.email} onChange={handleInputChange} required />
                         </div>
                         <div className="edit-btn">
@@ -50,7 +50,7 @@ const ContactList = ({ data, updateContact, deleteContact }) => {
                 </>
             ) : (<div className="contact-detail lists">
                     <span className="inputs-content">{inputs.name}</span>
-                    <span className="inputs-content">+91  {inputs.number}</span>
+                    <span className="inputs-content">+91  {inputs.phone}</span>
                     <span className="inputs-content">{inputs.email}</span>
                 </div>
                 )}
