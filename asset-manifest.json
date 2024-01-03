@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ContactListAdding_React_Project/static/css/main.39342ff5.css",
-    "main.js": "/ContactListAdding_React_Project/static/js/main.f1214623.js",
+    "main.js": "/ContactListAdding_React_Project/static/js/main.9cb52a42.js",
     "static/js/787.9764b4c7.chunk.js": "/ContactListAdding_React_Project/static/js/787.9764b4c7.chunk.js",
     "index.html": "/ContactListAdding_React_Project/index.html",
     "main.39342ff5.css.map": "/ContactListAdding_React_Project/static/css/main.39342ff5.css.map",
-    "main.f1214623.js.map": "/ContactListAdding_React_Project/static/js/main.f1214623.js.map",
+    "main.9cb52a42.js.map": "/ContactListAdding_React_Project/static/js/main.9cb52a42.js.map",
     "787.9764b4c7.chunk.js.map": "/ContactListAdding_React_Project/static/js/787.9764b4c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39342ff5.css",
-    "static/js/main.f1214623.js"
+    "static/js/main.9cb52a42.js"
   ]
 }
